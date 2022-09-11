@@ -394,10 +394,14 @@ p {
 }
 .footer-container {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
 }
 .footer-block-one {
   margin-right: 70px;
+}
+.footer-block-two {
+  margin-right: 93px;
 }
 .contact-list .contact-item:not(:last-child) {
   margin-bottom: 9px;
@@ -446,6 +450,46 @@ p {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--text-white-color);
+}
+.footer-form {
+  display: flex;
+}
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  fill: var(--white-background-color);
+  transition: background-color var(--transform-duration) var(--transform-timing-function);
+}
+.send-button:hover,
+.send-button:focus {
+  background-color: var(--hero-button-active);
+}
+.send-icon {
+  margin-left: 10px;
+}
+.footer-form-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.footer-form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--contact-item-color);
 }
 /*Modal window*/
 .backdrop {
@@ -496,6 +540,137 @@ p {
   fill: currentColor;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill var(--transform-duration) var(--transform-timing-function);
+}
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent-color);
+}
+.modal-form-wrapper {
+  padding: 40px;
+}
+.form-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.form-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.form-label.name {
+  margin-top: 0px;
+}
+.input-wrapper {
+  position: relative;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transform-duration) var(--transform-timing-function);
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--title-text-color);
+  transition: fill var(--transform-duration) var(--transform-timing-function);
+}
+.input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.input:focus + .input-icon {
+  fill: var(--accent-color);
+}
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transform-duration) var(--transform-timing-function);
+}
+.form-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.checkbox-icon {
+  margin-right: 7px;
+  background-color: transparent;
+  fill: var(--title-text-color);
+  cursor: pointer;
+  transition: fill var(--transform-duration) var(--transform-timing-function),
+    background-color var(--transform-duration) var(--transform-timing-function);
+}
+.checkbox:checked + .checkbox-icon {
+  background-image: url(../images/icon-check.svg);
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+  fill: var(--accent-color);
+}
+.checkbox:focus + .checkbox-icon {
+  border: 2px solid var(--accent-color);
+}
+.checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.link-conditions {
+  position: relative;
+  display: inline-block;
+  color: var(--accent-color);
+}
+.link-conditions:after {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
+}
+.send-button-wrapper {
+  display: flex;
+  justify-content: center;
 }
 /*Портфоліо*/
 .works-list .title {
